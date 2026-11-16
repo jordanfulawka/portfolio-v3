@@ -1,8 +1,61 @@
-@import 'tailwindcss';
 @import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap);
+@import 'tailwindcss';
 
-body {
-  font-family: 'Inter';
+@theme {
+  /* border dividers */
+  --color-line: #d5e2ef;
+  --color-line-dark: #22344a;
+
+  /* page */
+  --color-surface: #f7fafd;
+  --color-surface-dark: #0d1621;
+
+  /* cards */
+  --color-surface-raised: #ffffff;
+  --color-surface-raised-dark: #142130;
+
+  /* code */
+  --surface-sunk: #eaf2fa;
+  --surface-sunk-dark: #0a121b;
+
+  /* text */
+  --color-ink: #0f1d2b;
+  --color-ink-dark: #e8f1fa;
+
+  /* secondary text */
+  --color-ink-muted: #4a5b6e;
+  --color-ink-muted-dark: #9db0c4;
+
+  /* primary button, accent bar, cover*/
+  --color-sky: #7cc0f0;
+  --color-sky-dark: #7cc0f0;
+
+  --color-on-sky: #0f1d2b;
+  --color-on-sky-dark: #0f1d2b;
+
+  /* tags, hover tins */
+  --color-sky-soft: #d9eefc;
+  --color-sky-soft-dark: #17324a;
+
+  --color-sky-ink: #17598c;
+  --color-sky-ink-dark: #b5defa;
+
+  /* links, active nav, focus */
+  --color-sky-deep: #1f6fae;
+  --color-sky-deep-dark: #8fcdf5;
+
+  /* "new" post marker (once per view) */
+  --color-sun: #f2b544;
+  --color-sun-dark: #f2b544;
+
+  --color-sun-soft: #fdf0d3;
+  --color-sun-soft-dark: #3a2c10;
+
+  --color-sun-ink: #7a5200;
+  --color-sun-ink-dark: #f2c56a;
+
+  --color-focus-ring: #1f6fae;
+  --color-focus-ring-dark: #8fcdf5;
 }
 
 /* :root {
