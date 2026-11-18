@@ -1,6 +1,6 @@
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, stagger } from 'motion/react';
 
 const navLinks = [
   { name: 'Projects', href: '/projects' },
@@ -14,7 +14,12 @@ function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const list = {
-    open: { height: 'auto' },
+    open: {
+      height: 'auto',
+      transition: {
+        delayChildren: stagger(0.075),
+      },
+    },
     closed: { height: 0 },
   };
 
