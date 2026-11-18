@@ -1,6 +1,6 @@
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 
 const navLinks = [
   { name: 'Projects', href: '/projects' },
@@ -13,29 +13,54 @@ const navLinks = [
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const list = {
+    open: { height: 'auto' },
+    closed: { height: 0 },
+  };
+
+  const item = {
+    open: { opacity: 1, y: 0 },
+    closed: { opacity: 0, y: -12 },
+  };
+
   return (
-    <div className='w-full border border-black bg-surface-raised '>
-      <div className='flex justify-between z-2 bg-surface-raised p-5 font-inter'>
-        <h3>Jordan Fulawka</h3>
-        <button onClick={() => setMenuOpen((prev) => !prev)}>
-          <Menu />
-        </button>
+    <div className='w-full bg-surface-raised '>
+      <div className='flex justify-between z-2 bg-surface-raised p-5 font-inter border-b border-line'>
+        <h3 className='font-grotesk font-semibold'>Jordan Fulawka</h3>
+        <AnimatePresence>
+          <motion.button
+            onClick={() => setMenuOpen((prev) => !prev)}
+            animate={{ transform: menuOpen ? 'rotate(90deg)' : 'rotate(0)' }}
+            initial={{ transform: 'rotate(0)' }}
+            exit={{ transform: 'rotate(0)' }}
+          >
+            <Menu />
+          </motion.button>
+        </AnimatePresence>
       </div>
-      <motion.div animate={menuOpen ? 'open' : 'closed'} className='z-1'>
-        <motion.ul animate={{ height: menuOpen ? 'auto' : '0' }}>
-          {navLinks.map((navLink) => {
-            return (
-              <motion.li
-                animate={{
-                  transform: menuOpen ? 'translateY(0)' : `translateY(-200px)`,
-                }}
-              >
-                {navLink.name}
-              </motion.li>
-            );
-          })}
-        </motion.ul>
-      </motion.div>
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.ul
+            variants={list}
+            initial='closed'
+            animate='open'
+            exit='closed'
+            className='overflow-hidden font-grotesk'
+          >
+            {navLinks.map((navLink) => {
+              return (
+                <motion.li
+                  key={navLink.href}
+                  variants={item}
+                  className='p-2 border-b border-line hover:bg-sky-soft transition-all duration-300'
+                >
+                  {navLink.name}
+                </motion.li>
+              );
+            })}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

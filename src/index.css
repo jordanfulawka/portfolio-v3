@@ -33,7 +33,7 @@
   --color-on-sky: #0f1d2b;
   --color-on-sky-dark: #0f1d2b;
 
-  /* tags, hover tins */
+  /* tags, hover tints */
   --color-sky-soft: #d9eefc;
   --color-sky-soft-dark: #17324a;
 
@@ -54,11 +54,17 @@
   --color-sun-ink: #7a5200;
   --color-sun-ink-dark: #f2c56a;
 
+  /* for focus */
   --color-focus-ring: #1f6fae;
   --color-focus-ring-dark: #8fcdf5;
 
+  /* name, page titles, cartd titles */
   --font-grotesk: 'Space Grotesk', sans-serif;
+
+  /* body, summaries, buttons */
   --font-inter: 'Inter', sans-serif;
+
+  /* developer details: dates, read times, stack tags, code  */
   --font-mono: 'JetBrains Mono', sans-serif;
 }
 
