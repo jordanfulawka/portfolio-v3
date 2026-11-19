@@ -11,12 +11,12 @@ function ProjectTag({ name }: { name: string }) {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className='bg-surface-raised p-5 flex flex-col gap-3 border border-line rounded-xl shadow-sm hover:-translate-y-0.5'>
+    <div className='bg-surface-raised p-5 flex flex-col gap-3 border border-line rounded-xl shadow-sm hover:-translate-y-0.5 flex-0 max-w-150'>
       <p className='font-fancy uppercase tracking-wider text-xs text-ink-muted'>
         {project.header}
       </p>
       <h1 className='font-heading text-lg font-semibold'>{project.name}</h1>
-      <p className='text-ink-muted'>{project.description}</p>
+      <p className='text-ink-muted flex-1'>{project.description}</p>
       <div className='flex flex-wrap gap-3'>
         {project.tags.map((tag) => (
           <ProjectTag name={tag} />

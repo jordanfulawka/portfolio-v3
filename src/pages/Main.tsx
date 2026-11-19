@@ -4,7 +4,7 @@ import Projects from '../components/Projects';
 
 function Main() {
   return (
-    <div className='h-screen bg-surface'>
+    <div className='h-full bg-surface'>
       <Nav />
       <Hero />
       <Projects />

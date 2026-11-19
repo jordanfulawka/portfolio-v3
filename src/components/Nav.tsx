@@ -38,10 +38,20 @@ function Nav() {
             animate={{ transform: menuOpen ? 'rotate(90deg)' : 'rotate(0)' }}
             initial={{ transform: 'rotate(0)' }}
             exit={{ transform: 'rotate(0)' }}
+            className='md:hidden'
           >
             <Menu />
           </motion.button>
         </AnimatePresence>
+        <div className='hidden md:flex gap-5 font-main text-sm items-center font-medium'>
+          {navLinks.map((navLink) => {
+            return (
+              <p key={navLink.href} className=''>
+                {navLink.name}
+              </p>
+            );
+          })}
+        </div>
       </div>
       <AnimatePresence>
         {menuOpen && (
@@ -57,7 +67,7 @@ function Nav() {
                 <motion.li
                   key={navLink.href}
                   variants={item}
-                  className='p-2 border-b border-line hover:bg-sky-soft transition-all duration-300'
+                  className='p-2 border-b border-line hover:bg-sky-soft transition-all duration-300 text-sm font-medium'
                 >
                   {navLink.name}
                 </motion.li>
