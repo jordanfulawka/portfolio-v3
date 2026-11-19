@@ -29,7 +29,7 @@ function Nav() {
   };
 
   return (
-    <div className='w-full bg-surface-raised '>
+    <div className='w-full bg-surface-raised'>
       <div className='flex justify-between z-2 bg-surface-raised p-5 font-inter border-b border-line'>
         <h3 className='font-grotesk font-semibold'>Jordan Fulawka</h3>
         <AnimatePresence>

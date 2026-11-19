@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 
 @theme {
-  /* border dividers */
+  /* borders, dividers */
   --color-line: #d5e2ef;
   --color-line-dark: #22344a;
 
@@ -15,8 +15,8 @@
   --color-surface-raised-dark: #142130;
 
   /* code */
-  --surface-sunk: #eaf2fa;
-  --surface-sunk-dark: #0a121b;
+  --color-surface-sunk: #eaf2fa;
+  --color-surface-sunk-dark: #0a121b;
 
   /* text */
   --color-ink: #0f1d2b;

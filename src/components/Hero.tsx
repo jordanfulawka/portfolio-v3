@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <div className='m-6'>
+    <div className='p-5'>
       <div className='flex flex-col gap-3'>
         <h5 className='font-fancy uppercase text-xs font-light tracking-wider'>
           Software Developer · London, Ontario
@@ -12,6 +12,14 @@ function Hero() {
           spend the rest of my time learning things I'm curious about. This is
           where I keep my work and write about what I'm figuring out.
         </p>
+        <div className='flex justify-start gap-5'>
+          <button className='bg-sky py-3 px-5 rounded-lg font-main font-semibold text-sm'>
+            See my projects
+          </button>
+          <button className='bg-surface-raised border border-line py-3 px-5 rounded-lg font-main font-semibold text-sm'>
+            Read the blog
+          </button>
+        </div>
       </div>
       <div className='bg-sky p-6 rounded-xl mt-5'>
         <img
@@ -19,7 +27,7 @@ function Hero() {
           className='rounded-full w-35 h-35 object-cover border-5 border-focus-ring'
         />
         <p className='font-fancy text-sm mt-5 mb-2 uppercase'>Currently</p>
-        <ul className='font-main flex flex-col gap-1.5'>
+        <ul className='font-main flex flex-col gap-1.5 text-on-sky'>
           <li>Software developer at Aurelis</li>
           <li>Building a distributed job scheulder in Java</li>
           <li>Reading about operating systems</li>
