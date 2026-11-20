@@ -1,13 +1,6 @@
 import { Cat, SquareArrowUpRightExit } from 'lucide-react';
-import type { Project } from '../lib/types';
-
-function ProjectTag({ name }: { name: string }) {
-  return (
-    <p className='bg-sky-soft font-fancy text-sky-ink text-xs py-1 px-2 rounded-lg'>
-      {name}
-    </p>
-  );
-}
+import type { Project } from '../../lib/types';
+import Tag from '../ui/Tag';
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -19,7 +12,7 @@ function ProjectCard({ project }: { project: Project }) {
       <p className='text-ink-muted flex-1'>{project.description}</p>
       <div className='flex flex-wrap gap-3'>
         {project.tags.map((tag) => (
-          <ProjectTag name={tag} />
+          <Tag name={tag} />
         ))}
       </div>
       <div className='h-0 border-b border-line' />

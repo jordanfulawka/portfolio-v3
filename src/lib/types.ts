@@ -6,3 +6,10 @@ export interface Project {
   repoLink: string;
   liveLink?: string;
 }
+
+export interface Experience {
+  header: string;
+  title: string;
+  minor?: string;
+  description: string;
+}

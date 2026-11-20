@@ -21,7 +21,7 @@ function Hero() {
           </button>
         </div>
       </div>
-      <div className='bg-sky p-6 rounded-xl mt-5 min-w-90 max-w-90 md:flex-1'>
+      <div className='bg-sky p-6 rounded-xl mt-5 min-w-80 max-w-80 md:flex-1'>
         <img
           src='wolf.jpg'
           className='rounded-full w-35 h-35 object-cover border-5 border-focus-ring'

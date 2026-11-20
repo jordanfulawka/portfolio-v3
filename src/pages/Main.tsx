@@ -1,6 +1,7 @@
-import Hero from '../components/Hero';
-import Nav from '../components/Nav';
-import Projects from '../components/Projects';
+import Experience from '../sections/experience/Experience';
+import Hero from '../sections/Hero';
+import Nav from '../sections/Nav';
+import Projects from '../sections/projects/Projects';
 
 function Main() {
   return (
@@ -8,6 +9,7 @@ function Main() {
       <Nav />
       <Hero />
       <Projects />
+      <Experience />
     </div>
   );
 }
