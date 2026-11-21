@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <div className='p-5 max-w-300 mx-auto flex-wrap md:flex md:gap-5 md:items-center'>
-      <div className='flex flex-col gap-3 md:flex-3 md:min-w-110'>
+      <div className='flex flex-col gap-3 md:flex-3'>
         <h5 className='font-fancy uppercase text-xs font-light tracking-wider'>
           Software Developer · London, Ontario
         </h5>
@@ -21,7 +21,7 @@ function Hero() {
           </button>
         </div>
       </div>
-      <div className='bg-sky p-6 rounded-xl mt-5 min-w-80 max-w-80 md:flex-1'>
+      <div className='bg-sky p-6 rounded-xl mt-5 md:min-w-80 md:flex-1'>
         <img
           src='wolf.jpg'
           className='rounded-full w-35 h-35 object-cover border-5 border-focus-ring'

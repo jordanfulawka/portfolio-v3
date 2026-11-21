@@ -1,4 +1,6 @@
-export const projects = [
+import type { Project } from './types';
+
+export const projects: Project[] = [
   {
     name: 'Parsewell',
     header: 'Main project',
@@ -10,7 +12,7 @@ export const projects = [
   },
   {
     name: 'Hackathon Hotel Agent',
-    header: 'TechTO Winner ',
+    header: 'TechTO Winner',
     description:
       'An AI agent that takes in a prompt giving the city and budget, and spawns agents to call and verify the information, before reporting back with the cheapest price it finds.',
     tags: ['fast-api', 'twilio', 'eleven-labs'],
